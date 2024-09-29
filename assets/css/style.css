@@ -1,173 +1,398 @@
 /* Reset and box-sizing */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Wrapper div */
 #wrapper-div {
-    width: 100%;
-    margin: auto;
+  width: 100%;
+  margin: auto;
 }
 
 /* Navbar customization */
 .navbar {
-    background-color: rgba(0, 0, 0, 0.); /* Black with 80% opacity */
+    background-color: rgba(0, 0, 0, 0); /* Transparent */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-
-}
-
-.navbar-brand {
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-colored {
+    background-color: rgba(0, 0, 0, 0.8); /* Black with 80% opacity */
+  }
+  
+  /* Navbar text and link styling remains unchanged */
+  .navbar-brand {
     font-size: 1.8rem;
     font-weight: bold;
     color: rgba(255, 249, 249, 0.96);
-}
-
-.navbar-nav .nav-link {
+  }
+  
+  .navbar-nav .nav-link {
     color: #333;
     font-weight: 500;
     margin-right: 20px;
     font-weight: bold;
-}
-.navbar-light .navbar-nav .nav-link {
+  }
+  
+  .navbar-light .navbar-nav .nav-link {
     color: rgba(255, 249, 249, 0.96);
     font-weight: bold;
-}
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  }
+  
+  .navbar-light .navbar-nav .active > .nav-link,
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .nav-link.show,
+  .navbar-light .navbar-nav .show > .nav-link {
     color: rgba(249, 246, 246, 0.9);
     font-weight: bold;
-}
-.navbar-nav .nav-link:hover {
+  }
+  
+  .navbar-nav .nav-link:hover {
     color: #d9dee4;
-}
-.navbar-light .navbar-nav .nav-link:hover {
+  }
+  
+  .navbar-light .navbar-nav .nav-link:hover {
     color: rgba(255, 249, 249, 0.96);
-}
+  }
+  
 /* Banner section */
 /* Banner section */
 .header-banner {
-    background-image: url('../images/bg1.png'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    height: 48rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding: 0 50px;
-    position: relative;
+  background-image: url("../images/bg1.png"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 48rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 50px;
+  position: relative;
 }
 
 .banner-content {
-    max-width: 50%;
+  max-width: 50%;
 }
 
 .banner-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .banner-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .banner-buttons {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
-.view-events, .watch-video {
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: bold;
-    color: white;
-    background-color: #f39c12;
-    border-radius: 5px;
+.view-events,
+.watch-video {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #f39c12;
+  border-radius: 5px;
 }
 
 .watch-video {
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid #fff;
-    color: white;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: white;
 }
 
 .play-icon {
-    font-size: 1.2rem;
-    margin-right: 10px;
+  font-size: 1.2rem;
+  margin-right: 10px;
 }
 
-.watch-video:hover, .view-events:hover {
-    background-color: #e67e22;
+.watch-video:hover,
+.view-events:hover {
+  background-color: #e67e22;
 }
 
 /* Social Media Icons */
 .social-media-icons {
-    position: absolute;
-    right: 225px;
-    bottom: 305px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  position: absolute;
+  right: 225px;
+  bottom: 305px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .social-media-icons a {
-    color: white;
-    font-size: 1.8rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .social-media-icons a:hover {
-    color: #f39c12;
+  color: #f39c12;
 }
 
+/* Banner Section (Add the necessary styling for your banner) */
+.banner-section {
+  background: url("your-banner-image.jpg") center center no-repeat;
+  background-size: cover;
+  height: 400px; /* Adjust based on your banner's height */
+  position: relative;
+}
+
+/* Services Section */
+.services-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top: 90%; /* Makes the cards overlap the banner */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 10;
+}
+
+.service-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 22%;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background-color: #b84d9a; /* Hover background color */
+  color: white; /* Changes the text and icon color on hover */
+}
+
+.service-card .icon {
+  font-size: 30px;
+  color: #b84d9a;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #b84d9a;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.4;
+}
+
+.service-card:hover .icon {
+  color: white; /* Changes icon color on hover */
+}
+
+.service-card:hover h3,
+.service-card:hover p {
+  color: white; /* Changes text color on hover */
+}
+
+/* About Section */
+.about-section {
+  background-image: url("../images/bg1.png"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* This makes the background image stick */
+  color: white;
+  padding: 100px 50px; /* Adjust padding for proper spacing */
+  text-align: center;
+  position: relative;
+}
+
+.about-content {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Semi-transparent background for content */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #f39c12;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
 
 /* Main content */
 #main-div {
-    width: 100%;
-    padding: 30px;
+  width: 100%;
+  /* padding: 30px; */
+  margin-top: 150px;
 }
 
 #sidebar {
-    width: 20%;
-    min-height: 400px;
-    background: wheat;
-    float: left;
-    text-align: center;
-    line-height: 400px;
+  width: 20%;
+  min-height: 400px;
+  background: wheat;
+  float: left;
+  text-align: center;
+  line-height: 400px;
 }
 
 #body-area {
-    width: 75%;
-    min-height: 400px;
-    background-color: wheat;
-    float: right;
-    text-align: center;
-    line-height: 400px;
+  width: 100%;
+  min-height: 400px;
+  background-color: wheat;
+  float: right;
+  text-align: center;
+  line-height: 400px;
 }
 
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 
 /* Footer section */
-#footer {
-    width: 100%;
-    min-height: 50px;
-    background-color: wheat;
+/* Footer Styles */
+footer {
+  background-color: #2e2e2e;
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 20px;
+  min-width: 220px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #b84d9a; /* Highlighted color for section headers */
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #b84d9a; /* Change to highlight color on hover */
+}
+
+.footer-column p i {
+  margin-right: 10px;
+  color: #b84d9a;
+}
+
+/* Google Map Container */
+.map-container {
+  margin-top: 15px;
+}
+
+.map-container iframe {
+  border-radius: 8px;
+  border: 0;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #b84d9a; /* Change social icons color on hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  background-color: #222;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    line-height: 50px;
+  }
+
+  .footer-column {
+    margin: 10px 0;
+  }
+}
+
+#footer {
+  width: 100%;
+  min-height: 50px;
+  background-color: wheat;
+  text-align: center;
+  line-height: 50px;
 }
